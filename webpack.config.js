@@ -1,30 +1,30 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: "./src/main.ts",
+  entry: './src/main.ts',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
+    path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html'
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "static" }],
-    }),
+      patterns: [{ from: 'static' }]
+    })
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
   devServer: {
-    open: true,
-  },
-};
+    open: true
+  }
+}
