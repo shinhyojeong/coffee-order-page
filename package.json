@@ -9,7 +9,11 @@
   "repository": "https://github.com/shinhyojeong/coffee-order-page.git",
   "author": "shinhyojeong <hyojeonge0@naver.com>",
   "license": "MIT",
+  "browserslist": "> 0.25%, not dead",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/runtime-corejs3": "^7.18.9",
+    "autoprefixer": "^10.4.8",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.21.0",
